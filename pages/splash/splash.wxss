@@ -1,0 +1,23 @@
+page {
+  background: #DDD;
+}
+.mask {
+  position: absolute;
+  bottom: 100rpx;
+  left: 0;
+  height: 150rpx;
+  width: 100%;
+  background: rgba(0, 0, 0, .3)
+}
+.logo {
+  margin-left: 100rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.app-text {
+  position: absolute;
+  left: 280rpx;
+  font-size: 30rpx;
+  bottom: 20rpx;
+  color: #EEE
+}

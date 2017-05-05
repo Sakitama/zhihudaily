@@ -1,0 +1,7 @@
+<view>
+    <image src="{{url}}" class="cover" style="height:{{screenHeight}}px;width:{{screenWidth}}px"></image>
+</view>
+<view class="mask">
+    <image class="logo" src="../../images/logo.jpg"></image>
+    <text class="app-text">每天三次，每次七分钟！</text>
+</view>

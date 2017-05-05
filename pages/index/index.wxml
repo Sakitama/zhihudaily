@@ -1,0 +1,66 @@
+<scroll-view scroll-y="true" class="theme-list">
+    <view class="theme-list-top"></view>
+    <view class="theme-list-content">
+        <view class="theme-list-content-index theme-list-content-item {{currentIndex === '-1' ? 'active' : ''}}"
+              bindtap="toIndex" data-index="-1">
+            <image src="../../images/home.png" mode="widthFix" class="theme-list-content-index-home"></image>
+            <text>首页</text>
+        </view>
+        <block wx:for="{{themeListData.others}}">
+            <view class="theme-list-content-other theme-list-content-item {{currentIndex === index ? 'active' : ''}}"
+                  data-id="{{item.id}}"
+                  bindtap="toTheme"
+                  data-index="{{index}}">
+                <text>{{item.name}}</text>
+            </view>
+        </block>
+    </view>
+</scroll-view>
+<scroll-view scroll-y="true" bindscrolltolower="loadingMore" class="news-main-wrap {{open ? 'c-state1' : ''}}" bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}"
+            duration="{{duration}}" indicator-active-color="{{indicatorActiveColor}}"
+            wx:if="{{pageData[0].top_stories}}">
+        <block wx:for="{{pageData[0].top_stories}}">
+            <swiper-item data-id="{{item.id}}" bindtap="toDetailPage">
+                <view class="banner-image">
+                    <image mode="widthFix"
+                           src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.image}}"/>
+                </view>
+                <view class="banner-mask"></view>
+                <view class="banner-desc">
+                    <text>{{item.title}}</text>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view wx:else class="theme-top">
+        <view class="theme-top-image">
+            <image mode="widthFix"
+                   src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{pageData[0].background}}"/>
+        </view>
+        <view class="theme-top-mask"></view>
+        <view class="theme-top-desc">
+            <text>{{pageData[0].description}}</text>
+        </view>
+    </view>
+    <view class="day-content">
+        <block wx:for="{{pageData}}">
+            <view class="day-content-item">
+                <view class="day-title">
+                    <text>{{item.pageTitle}}</text>
+                </view>
+                <block wx:for="{{item.stories}}">
+                    <view class="news-item" data-id="{{item.id}}" bindtap="toDetailPage">
+                        <view class="news-item-desc">
+                            <text>{{item.title}}</text>
+                        </view>
+                        <view class="news-item-image">
+                            <image mode="widthFix"
+                                   src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{item.images[0]}}"/>
+                        </view>
+                    </view>
+                </block>
+            </view>
+        </block>
+    </view>
+</scroll-view>

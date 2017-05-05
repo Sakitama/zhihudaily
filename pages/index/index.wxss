@@ -1,0 +1,194 @@
+scroll-view {
+  width: 100%;
+  height: 100%;
+}
+
+swiper {
+  width: 100%;
+  height: 35%;
+}
+
+/*首页主体*/
+.news-main-wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: #DDD;
+  transition: All 0.4s ease;
+  -webkit-transition: All 0.4s ease;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.banner-image image {
+  width: 100%;
+}
+
+.banner-desc {
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+
+/*最多两行，超出部分以省略号代替*/
+.banner-desc text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 20px;
+  color: #fff;
+}
+
+.banner-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+}
+
+/*新闻列表页*/
+.day-content {
+  width: 100%;
+}
+
+.day-title {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10rpx 30rpx 30rpx 30rpx;
+  font-size: 14px;
+  color: rgba(7, 17, 27, .5);
+}
+
+/*选择最新一天的消息的标题*/
+.day-content-item:first-child .day-title {
+  padding-top: 30rpx;
+}
+
+.news-item {
+  margin: 0 20rpx 20rpx 20rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.news-item-image {
+  width: 150rpx;
+  height: 120rpx;
+  overflow: hidden;
+}
+
+.news-item-image image {
+  width: 100%;
+}
+
+.news-item-desc {
+  flex: 1;
+  margin-right: 30rpx;
+  overflow: hidden;
+  height: 120rpx;
+}
+
+.news-item-desc text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 16px;
+}
+
+
+.theme-list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+}
+
+.theme-list-top {
+  width: 100%;
+  height: 200rpx;
+  background: #019DD6;
+}
+
+.theme-list-content-item {
+  display: flex;
+  width: 100%;
+  height: 80rpx;
+  font-size: 14px;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30rpx;
+}
+
+.theme-list-content-index-home {
+  width: 50rpx;
+  margin-right: 30rpx;
+}
+
+.theme-top {
+  width: 100%;
+  height: 35%;
+  position: relative;
+}
+
+.theme-top-image {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.theme-top-image image {
+  width: 100%;
+}
+
+.theme-top-desc {
+  position: absolute;
+  bottom: 50rpx;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+
+.theme-top-desc text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  font-size: 20px;
+  color: #fff;
+}
+
+.theme-top-mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .4);
+}
+
+/*主题列表选中样式*/
+.active {
+  background: rgba(0, 0, 0, .4);
+}
+
+/*首页主体滑动偏移*/
+.c-state1 {
+  transform: rotate(0deg) scale(1) translate(60%, 200rpx);
+  -webkit-transform: rotate(0deg) scale(1) translate(60%, 200rpx);
+}

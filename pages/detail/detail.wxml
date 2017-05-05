@@ -1,0 +1,14 @@
+<import src="../../wxParse/wxParse.wxml"/>
+<view class="top-banner">
+    <view class="top-banner-image">
+        <image mode="widthFix" src="http://read.html5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl={{pageData.image}}"/>
+    </view>
+    <view class="top-banner-mask"></view>
+    <view class="top-banner-title">
+        <text>{{pageData.title}}</text>
+    </view>
+    <view class="top-banner-source">
+        <text>{{pageData.image_source}}</text>
+    </view>
+</view>
+<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
